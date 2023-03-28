@@ -2,5 +2,13 @@
   (:gen-class)
   (:require [datalevin.core :as d]))
 
-(defn -main [& args]
-  (d/create-conn "/Users/jake/.hypo2"))
+(defn -main [& _args]
+  (let [conn (d/create-conn)]
+    (d/transact! conn [{:a 1}])
+    (println
+     "Success:"
+     (= 1
+        (d/q '[:find ?v .
+               :in $
+               :where [_ :a ?v]]
+             (d/db conn))))))

@@ -2,3 +2,6 @@ target
 *.DS_Store
 .cpcache/
 .nrepl-port
+example
+example.build_artifacts.txt
+reports/

@@ -5,7 +5,7 @@
 
 (def basis (b/create-basis {:project "deps.edn"}))
 
-(def jar-file "target/hypo.jar")
+(def jar-file "target/example.jar")
 
 (defn clean [_]
   (b/delete {:path "target"}))

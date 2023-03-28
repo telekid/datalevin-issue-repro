@@ -7,4 +7,4 @@ clj -T:build uberjar
 
 "$GRAALVM_HOME/bin/native-image" \
     --features=InitAtBuildTimeFeature \
-    -jar target/hypo.jar hypo
+    -jar target/example.jar example
