@@ -22,4 +22,4 @@
   (b/uber {:class-dir class-dir
            :uber-file jar-file
            :basis basis
-           :main 'main}))
+           :main 'test.main}))
