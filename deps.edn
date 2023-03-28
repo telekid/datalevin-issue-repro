@@ -1,0 +1,18 @@
+;; TODO: Create separate reflect-config files for each dep
+
+{:paths ["src"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        ;; About:
+        ;; https://cljdoc.org/d/datalevin/datalevin/0.8.5/doc/graal-native
+        org.clojars.huahaiy/datalevin-native {:mvn/version "0.8.5"}
+        com.github.clj-easy/graal-build-time {:mvn/version "0.1.4"}}
+
+ :mvn/repos
+ {"central" {:url "https://repo1.maven.org/maven2/"}
+  "clojars" {:url "https://clojars.org/repo"}
+  "intellij" {:url "https://packages.jetbrains.team/maven/p/ij/intellij-dependencies"}}
+
+ :aliases {:build
+           {:extra-deps
+            {io.github.clojure/tools.build {:git/tag "v0.8.1" :git/sha "7d40500"}}
+            :ns-default build}}}
